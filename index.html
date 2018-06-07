@@ -11,9 +11,6 @@
 			<!-- TEXTURE PRECARICATE -->
 			<a-assets>
 				<!-- IMMAGINI -->
-				<img id="pavimento" src="img/texturepavimento.jpg"/>
-				<img id="parete" src="img/textureparete.jpg"/>
-				<img id="tetto" src="img/texturetetto.jpg"/>
 				<img id="logo" src="img/The_Vincent_Club.png" />
 				<img id="logo1" src="img/binario.png" />
 				<img id="tekapp" src="img/tekapp.png" />
@@ -21,6 +18,8 @@
 				<!-- FINE IMMAGINI -->
 
 				<!-- MODELLI PRECARICATI -->
+				<a-asset-item id="pianta" src="oggetti/pianta.obj"></a-asset-item>
+				<a-asset-item id="mPianta" src="oggetti/pianta.mtl"></a-asset-item>
 				<a-asset-item id="tavolo" src="oggetti/tavolo.obj"></a-asset-item>
 				<a-asset-item id="mTavolo" src="oggetti/tavolo.mtl"></a-asset-item>
 				<a-asset-item id="sedia" src="oggetti/sedia.obj"></a-asset-item>
@@ -35,8 +34,6 @@
 				<a-asset-item id="mPorta" src="oggetti/porta.mtl"></a-asset-item>
 				<a-asset-item id="entrata" src="oggetti/entrata.obj"></a-asset-item>
 				<a-asset-item id="mEntrata" src="oggetti/entrata.mtl"></a-asset-item>
-				<a-asset-item id="pianta" src="oggetti/pianta.obj"></a-asset-item>
-				<a-asset-item id="mPianta" src="oggetti/pianta.mtl"></a-asset-item>
 				<a-asset-item id="sediaentrata" src="oggetti/sediaentrata.obj"></a-asset-item>
 				<a-asset-item id="mSediaentrata" src="oggetti/sediaentrata.mtl"></a-asset-item>
 				<a-asset-item id="tavoloentrata" src="oggetti/tavoloentrata.obj"></a-asset-item>
@@ -111,8 +108,8 @@
 			<a-obj-model src="#sediaentrata" mtl="#mSediaentrata" position='-13 0.1 -15' scale="1.2 1.2 1.2" rotation="0 0 0" static-body></a-obj-model>
 			<a-obj-model src="#sediaentrata" mtl="#mSediaentrata" position='-12.5 0.1 -19' scale="1.2 1.2 1.2" rotation="0 -30 0" static-body></a-obj-model>
 
-			<!--<a-obj-model src="#gabinetto" mtl="#mGabinetto" position='7 0.1 -10.8'  rotation="0 -90 0" static-body></a-obj-model>
-			<a-obj-model src="#lavandino" mtl="#mLavandino" position='5 0.1 -10.8'  rotation="0 -90 0" static-body></a-obj-model>-->
+			<a-obj-model src="#gabinetto" mtl="#mGabinetto" position='7 0.1 -10.8'  rotation="0 -90 0" static-body></a-obj-model>
+			<a-obj-model src="#lavandino" mtl="#mLavandino" position='5 0.1 -10.8'  rotation="0 -90 0" static-body></a-obj-model>
 
 			<a-obj-model src="#tavoloentrata" mtl="#mTavoloentrata" position='-11 0.1 -14.5' scale="0.3 0.3 0.4" rotation="0 0 0" static-body></a-obj-model>
 
@@ -121,8 +118,8 @@
 
 			<!-- GRAFFITI -->
 			<a-image src='#logo' height='4' width='10' repeat='1' position='3 2 2.06' side='front'></a-image>
-			<a-image src='#logo1' height='2' width='4' repeat='1' position='-26.41 2.5 -15' rotation="0 -90 0" side='double'></a-image>
-			<a-image src='#tekapp' height='1' width='4' repeat='1' position='-8 3 -25.2' rotation="0 0 0" side='double'></a-image>
+			<a-image src='#logo1' height='2' width='4' repeat='1' position='-26.41 2.5 -15' rotation="0 -90 0" side='front'></a-image>
+			<a-image src='#tekapp' height='1' width='4' repeat='1' position='-8 3 -25.2' rotation="0 0 0" side='front'></a-image>
 			<a-image src='#cartelloestintore' height='0.4' width='0.25' repeat='1' position='-0.73 2.5 -7.63' rotation="0 180 0" side='front'></a-image>
 			<!-- FINE GRAFFITI -->
 
