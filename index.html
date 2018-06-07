@@ -6,20 +6,21 @@
 		<script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v3.1.2/dist/aframe-physics-system.min.js"></script>
 		<script src="js/script.js"></script>
 	</head>
-	<body onclick="prendiPosizione(); posizioneCamera();">
-		<a-scene physics="debug: true">
+	<body onclick="prendiPosizione();">
+		<a-scene> <!-- physics="debug: true" -->
 			<!-- TEXTURE PRECARICATE -->
 			<a-assets>
+				<!-- IMMAGINI -->
 				<img id="pavimento" src="img/texturepavimento.jpg"/>
-			
 				<img id="parete" src="img/textureparete.jpg"/>
-				
 				<img id="tetto" src="img/texturetetto.jpg"/>
-				
 				<img id="logo" src="img/The_Vincent_Club.png" />
 				<img id="logo1" src="img/binario.png" />
 				<img id="tekapp" src="img/tekapp.png" />
-				<!--<img id="parete1" src="img/texturepareteesterna.jpg"/>-->
+				<img id="cartelloestintore" src="img/cartelloestintore.jpg"/>
+				<!-- FINE IMMAGINI -->
+
+				<!-- MODELLI PRECARICATI -->
 				<a-asset-item id="tavolo" src="oggetti/tavolo.obj"></a-asset-item>
 				<a-asset-item id="mTavolo" src="oggetti/tavolo.mtl"></a-asset-item>
 				<a-asset-item id="sedia" src="oggetti/sedia.obj"></a-asset-item>
@@ -36,7 +37,6 @@
 				<a-asset-item id="mEntrata" src="oggetti/entrata.mtl"></a-asset-item>
 				<a-asset-item id="pianta" src="oggetti/pianta.obj"></a-asset-item>
 				<a-asset-item id="mPianta" src="oggetti/pianta.mtl"></a-asset-item>
-
 				<a-asset-item id="sediaentrata" src="oggetti/sediaentrata.obj"></a-asset-item>
 				<a-asset-item id="mSediaentrata" src="oggetti/sediaentrata.mtl"></a-asset-item>
 				<a-asset-item id="tavoloentrata" src="oggetti/tavoloentrata.obj"></a-asset-item>
@@ -47,7 +47,9 @@
 				<a-asset-item id="mGabinetto" src="oggetti/gabinetto.mtl"></a-asset-item>
 				<a-asset-item id="portavetro" src="oggetti/portavetro.obj"></a-asset-item>
 				<a-asset-item id="mPortavetro" src="oggetti/portavetro.mtl"></a-asset-item>
-
+				<a-asset-item id="estintore" src="oggetti/estintore.obj"></a-asset-item>
+				<a-asset-item id="mEstintore" src="oggetti/estintore.mtl"></a-asset-item>
+				<!-- MODELLI PRECARICATI -->
 			</a-assets>
 			<!-- FINE TEXTURE PRECARICATE -->
 
@@ -55,51 +57,6 @@
 			<a-text class="testo" value="Uvuvwevwevwe onyetenyevwe ugwemubwem ossas -> commento da leggere dietro" color="red" width="100" position='-2 20 -5'></a-text>
 			<a-text class="testo" value="FARE SCRIPT CHE PRENDE LA POSIZIONE DELLA CAMERA E LO SCRIVE DENTRO LE TEXT" color="red" width="100" position='2 20 -5' rotation="0 180 0"></a-text>
 			<!-- FINE POSIZIONE -->
-
-			<!-- PAVIMENTO -->
-			<!--<a-plane src='#pavimento' height='2' width='40' repeat='20' position='0 0 -20' rotation='-90 0 0' static-body></a-plane>
-			<a-plane src='#pavimento' height='2' width='40' repeat='20' position='0 0 -18' rotation='-90 0 0' static-body></a-plane>
-			<a-plane src='#pavimento' height='2' width='40' repeat='20' position='0 0 -16' rotation='-90 0 0' static-body></a-plane>
-			<a-plane src='#pavimento' height='2' width='40' repeat='20' position='0 0 -14' rotation='-90 0 0' static-body></a-plane>
-			<a-plane src='#pavimento' height='2' width='40' repeat='20' position='0 0 -12' rotation='-90 0 0' static-body></a-plane>
-			<a-plane src='#pavimento' height='2' width='40' repeat='20' position='0 0 -10' rotation='-90 0 0' static-body></a-plane>
-			<a-plane src='#pavimento' height='2' width='40' repeat='20' position='0 0 -8' rotation='-90 0 0' static-body></a-plane>
-			<a-plane src='#pavimento' height='2' width='40' repeat='20' position='0 0 -6' rotation='-90 0 0' static-body></a-plane>
-			<a-plane src='#pavimento' height='2' width='40' repeat='20' position='0 0 -4' rotation='-90 0 0' static-body></a-plane>
-			<a-plane src='#pavimento' height='2' width='40' repeat='20' position='0 0 -2' rotation='-90 0 0' static-body></a-plane>
-			<a-plane src='#pavimento' height='2' width='40' repeat='20' position='0 0 0' rotation='-90 0 0' static-body></a-plane>
-			<a-plane src='#pavimento' height='2' width='40' repeat='20' position='0 0 2' rotation='-90 0 0' static-body></a-plane>
-			<a-plane src='#pavimento' height='2' width='40' repeat='20' position='0 0 4' rotation='-90 0 0' static-body></a-plane>
-			<a-plane src='#pavimento' height='2' width='40' repeat='20' position='0 0 6' rotation='-90 0 0' static-body></a-plane>
-			<a-plane src='#pavimento' height='2' width='40' repeat='20' position='0 0 8' rotation='-90 0 0' static-body></a-plane>
-			<a-plane src='#pavimento' height='2' width='40' repeat='20' position='0 0 10' rotation='-90 0 0' static-body></a-plane>
-			<a-plane src='#pavimento' height='2' width='40' repeat='20' position='0 0 12' rotation='-90 0 0' static-body></a-plane>
-			<a-plane src='#pavimento' height='2' width='40' repeat='20' position='0 0 14' rotation='-90 0 0' static-body></a-plane>
-			<a-plane src='#pavimento' height='2' width='40' repeat='20' position='0 0 16' rotation='-90 0 0' static-body></a-plane>
-			<a-plane src='#pavimento' height='2' width='40' repeat='20' position='0 0 18' rotation='-90 0 0' static-body></a-plane>-->
-			<!-- FINE PAVIMENTO -->
-
-			<!-- PARETI -->
-			<!--<a-box src='#parete' height='5' width='20' depth="0.1" repeat='2' position='-1 2.5 2' side='double'></a-box>
-			<a-box src='#parete' height='5' width='20' depth="0.1" repeat='2' position='-11 2.5 -8' rotation='0 90 0' side='double'></a-box>
-			<a-box src='#parete' height='5' width='20' depth="0.1" repeat='2' position='-1 2.5 -18' side='double'></a-box>
-			<a-box src='#parete' height='5' width='20' depth="0.1" repeat='2' position='9 2.5 -8' rotation='0 -90 0' side='double'></a-box>
-			<a-box src='#parete' height='5' width='10' depth="0.1" position='-6 2.5 -13' side='double'></a-box>
-			<a-box src='#parete' height='5' width='20' depth="0.1" repeat='2' position='-1 2.5 -5' side='double'></a-box>
-			<a-box src='#parete' height='5' width='10' depth="0.1" position='-6 2.5 -7' side='double'></a-box>
-			<a-box src='#parete' height='5' width='6' depth="0.1" position='-3 2.5 -10' side='double' rotation="0 90 0"></a-box>
-			<a-box src='#parete' height='5' width='7' depth="0.1" position='0 2.5 -1.5' side='double' rotation="0 90 0"></a-box>-->
-
-			<!--<a-plane src='#parete' height='10' width='20' repeat='2' position='-1 5 -13' rotation='-90 180 0' side='double'></a-plane>
-			<a-plane src='#parete' height='10' width='20' repeat='2' position='-1 5 -3' rotation='-90 0 0' side='double'></a-plane>
-			<a-triangle src="#parete" vertex-a='-8 11.7 8' vertex-b='-8 8 -2' vertex-c='-8 8 18' position="-3 -3 -16" side='double'></a-triangle>
-			<a-triangle src="#parete" vertex-a='-8 11.7 8' vertex-b='-8 8 -2' vertex-c='-8 8 18' position="17 -3 -16" side='double'></a-triangle>-->
-			<!-- TETTO -->
-			<!--<a-plane src='#tetto' height='11.5' width='20' repeat='2' position='-1 6.84 -13' rotation='-70 180 0' side='double'></a-plane>
-			<a-plane src='#tetto' height='11.5' width='20' repeat='2' position='-1 6.84 -3' rotation='110 0 0' side='double'></a-plane>-->
-			<!-- FINE TETTO -->
-			<!-- FINE PARETI -->
-
 
 			<!-- MODELLI -->
 			<a-obj-model src="#tavolo" mtl="#mTavolo" position='3 0 -0.5' scale="1.1 1.1 1.1" static-body></a-obj-model>
@@ -136,60 +93,48 @@
 			<a-obj-model src="#porta" mtl="#mPorta" position='-2.86 0.1 -5.73' scale="1.92 1.4 1.4" rotation="0 0 0" static-body></a-obj-model>
 			<a-obj-model src="#porta" mtl="#mPorta" position='-5.06 0.1 -5.73' scale="1.92 1.4 1.4" rotation="0 0 0" static-body></a-obj-model>
 			<a-obj-model src="#porta" mtl="#mPorta" position='-22.22 0.1 -5.73' scale="1.92 1.4 1.4" rotation="0 0 0" static-body></a-obj-model>
-			<a-obj-model src="#portavetro" mtl="#mPortavetro" position='-24.3 0.1 -21.33' scale="1.92 1.4 1.4" rotation="0 0 0" static-body></a-obj-model>
-			<a-obj-model src="#portavetro" mtl="#mPortavetro" position='-26.1 0.1 -17.7' scale="1.92 1.4 1.4" rotation="0 90 0" static-body></a-obj-model>
-			<a-obj-model src="#portavetro" mtl="#mPortavetro" position='-28.6 0.1 -21.33' scale="1.92 1.4 1.4" rotation="0 0 0" static-body></a-obj-model>
-			<!-- oblique -->
+			
 			<a-obj-model src="#porta" mtl="#mPorta" position='-13.73 0.1 -25.17' scale="1.3 1.4 1.4" rotation="0 -135 0" static-body></a-obj-model>
 			<a-obj-model src="#porta" mtl="#mPorta" position='-0.63 0.1 -24.22' scale="1.3 1.4 1.4" rotation="0 135 0" static-body></a-obj-model>
-			<!-- fine oblique-->
 			<a-obj-model src="#porta" mtl="#mPorta" position='-0.4 0.1 -8.29' scale="1.92 1.4 1.4" rotation="0 90 0" static-body></a-obj-model>
 			<a-obj-model src="#porta" mtl="#mPorta" position='-0.4 0.1 -17.72' scale="1.92 1.4 1.4" rotation="0 90 0" static-body></a-obj-model>
 			<a-obj-model src="#porta" mtl="#mPorta" position='-0.4 0.1 -15.39' scale="1.92 1.4 1.4" rotation="0 90 0" static-body></a-obj-model>
 			<a-obj-model src="#porta" mtl="#mPorta" position='-1.98 0.1 -25.35' scale="1.92 1.4 1.4" rotation="0 180 0" static-body></a-obj-model>
 			<a-obj-model src="#porta" mtl="#mPorta" position='-11.4 0.1 -25.35' scale="1.92 1.4 1.4" rotation="0 180 0" static-body></a-obj-model>
-
+			<a-obj-model src="#portavetro" mtl="#mPortavetro" position='-24.3 0.1 -21.33' scale="1.92 1.4 1.4" rotation="0 0 0" static-body></a-obj-model>
+			<a-obj-model src="#portavetro" mtl="#mPortavetro" position='-26.1 0.1 -17.7' scale="1.92 1.4 1.4" rotation="0 90 0" static-body></a-obj-model>
+			<a-obj-model src="#portavetro" mtl="#mPortavetro" position='-28.6 0.1 -21.33' scale="1.92 1.4 1.4" rotation="0 0 0" static-body></a-obj-model>
 
 			<a-obj-model src="#pianta" mtl="#mPianta" position="-29 0.1 2" scale="1.3 1.3 1.3"></a-obj-model>
-
-
 
 			<a-obj-model src="#sediaentrata" mtl="#mSediaentrata" position='-12.5 0.1 -11' scale="1.2 1.2 1.2" rotation="0 30 0" static-body></a-obj-model>
 			<a-obj-model src="#sediaentrata" mtl="#mSediaentrata" position='-13 0.1 -15' scale="1.2 1.2 1.2" rotation="0 0 0" static-body></a-obj-model>
 			<a-obj-model src="#sediaentrata" mtl="#mSediaentrata" position='-12.5 0.1 -19' scale="1.2 1.2 1.2" rotation="0 -30 0" static-body></a-obj-model>
 
-
-			<!--<a-obj-model src="#gabinetto" mtl="#mGabinetto" position='7 0.1 -10.8'  rotation="0 -90 0" static-body></a-obj-model>-->
-			<!--<a-obj-model src="#lavandino" mtl="#mLavandino" position='5 0.1 -10.8'  rotation="0 -90 0" static-body></a-obj-model>-->
-
+			<!--<a-obj-model src="#gabinetto" mtl="#mGabinetto" position='7 0.1 -10.8'  rotation="0 -90 0" static-body></a-obj-model>
+			<a-obj-model src="#lavandino" mtl="#mLavandino" position='5 0.1 -10.8'  rotation="0 -90 0" static-body></a-obj-model>-->
 
 			<a-obj-model src="#tavoloentrata" mtl="#mTavoloentrata" position='-11 0.1 -14.5' scale="0.3 0.3 0.4" rotation="0 0 0" static-body></a-obj-model>
 
-
+			<a-obj-model src="#estintore" mtl="#mEstintore" position='-0.55 0.1 -7.88' scale="0.15 0.15 0.15" rotation="0 180 0" static-body></a-obj-model>
+			<!-- FINE MODELLI -->
 
 			<!-- GRAFFITI -->
-			<!--<a-image src='#logo' height='5' width='10' repeat='1' position='4 2.5 -11' side="front"></a-image>-->
 			<a-image src='#logo' height='4' width='10' repeat='1' position='3 2 2.06' side='front'></a-image>
 			<a-image src='#logo1' height='2' width='4' repeat='1' position='-26.41 2.5 -15' rotation="0 -90 0" side='double'></a-image>
 			<a-image src='#tekapp' height='1' width='4' repeat='1' position='-8 3 -25.2' rotation="0 0 0" side='double'></a-image>
+			<a-image src='#cartelloestintore' height='0.4' width='0.25' repeat='1' position='-0.73 2.5 -7.63' rotation="0 180 0" side='front'></a-image>
 			<!-- FINE GRAFFITI -->
 
 			<!-- CIELO -->
 			<a-sky src="img/cielo5.png"></a-sky>
+			<!-- FINE CIELO -->
 
 			<!-- DIPENDENTE (Altezza: 1.80 / 1.65)-->
 			<a-entity position="-17 1.65 -10" rotation="0 0 0">
 				<!-- <a-animation attribute="rotation" delay="3000" dur="8000" fill="forwards" to="0 1080 1080"></a-animation> -->
 				<a-camera fov="70" id="posizione"></a-camera>
 			</a-entity>
-			<!--<a-entity>
-				<a-animation attribute="position" delay="3000" dur="8000" fill="forwards" easing="linear" to="-6 0.1 -2"></a-animation>
-				<a-animation attribute="rotation" delay="3000" dur="8000" fill="forwards" easing="linear" to="0 90 0"></a-animation>
-				<a-obj-model src="#porta" mtl="#mPorta" position='-4 0.1 2.06' scale="1.2 1.2 1.2" rotation="0 180 0" static-body></a-obj-model>
-			</a-entity>-->
 		</a-scene>
 	</body>
 </html>
-
-
-<!-- "3.5 1.65 7" -->
