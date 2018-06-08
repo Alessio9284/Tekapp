@@ -2,17 +2,12 @@
 <html>
 	<head>
 		<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v3.1.2/dist/aframe-physics-system.min.js"></script>
-		<script src="js/script.js"></script>
 	</head>
-	<body onclick="prendiPosizione();">
-		<a-scene> <!-- physics="debug: true" -->
+	<body>
+		<a-scene>
 			<!-- TEXTURE PRECARICATE -->
 			<a-assets>
 				<!-- IMMAGINI -->
-				<img id="logo" src="img/The_Vincent_Club.png" />
-				<img id="logo1" src="img/binario.png" />
 				<img id="tekapp" src="img/tekapp.png" />
 				<img id="cartelloestintore" src="img/cartelloestintore.jpg"/>
 				<!-- FINE IMMAGINI -->
@@ -50,75 +45,69 @@
 			</a-assets>
 			<!-- FINE TEXTURE PRECARICATE -->
 
-			<!-- POSIZIONE -->
-			<a-text class="testo" value="Uvuvwevwevwe onyetenyevwe ugwemubwem ossas -> commento da leggere dietro" color="red" width="100" position='-2 20 -5'></a-text>
-			<a-text class="testo" value="FARE SCRIPT CHE PRENDE LA POSIZIONE DELLA CAMERA E LO SCRIVE DENTRO LE TEXT" color="red" width="100" position='2 20 -5' rotation="0 180 0"></a-text>
-			<!-- FINE POSIZIONE -->
-
 			<!-- MODELLI -->
-			<a-obj-model src="#tavolo" mtl="#mTavolo" position='3 0 -0.5' scale="1.1 1.1 1.1" static-body></a-obj-model>
+			<a-obj-model src="#tavolo" mtl="#mTavolo" position='3 0 -0.5' scale="1.1 1.1 1.1"></a-obj-model>
 
-			<a-obj-model src="#sedia" mtl="#mSedia" position='3.25 0.1 -3' scale="1.5 1.5 1.5" rotation="0 0 0" static-body></a-obj-model>
-			<a-obj-model src="#sedia" mtl="#mSedia" position='5.5 0.1 -3' scale="1.5 1.5 1.5" static-body></a-obj-model>
-			<a-obj-model src="#sedia" mtl="#mSedia" position='4.5 0.1 -0.5' scale="1.5 1.5 1.5" rotation="0 180 0" static-body></a-obj-model>
-			<a-obj-model src="#sedia" mtl="#mSedia" position='7 0.1 -0.5' scale="1.5 1.5 1.5" rotation="0 180 0" static-body></a-obj-model>
-			<a-obj-model src="#sedia" mtl="#mSedia" position='-9.5 0.1 -25' scale="1.5 1.5 1.5" rotation="0 -90 0" static-body></a-obj-model>
+			<a-obj-model src="#sedia" mtl="#mSedia" position='3.25 0.1 -3' scale="1.5 1.5 1.5" rotation="0 0 0"></a-obj-model>
+			<a-obj-model src="#sedia" mtl="#mSedia" position='5.5 0.1 -3' scale="1.5 1.5 1.5"></a-obj-model>
+			<a-obj-model src="#sedia" mtl="#mSedia" position='4.5 0.1 -0.5' scale="1.5 1.5 1.5" rotation="0 180 0"></a-obj-model>
+			<a-obj-model src="#sedia" mtl="#mSedia" position='7 0.1 -0.5' scale="1.5 1.5 1.5" rotation="0 180 0"></a-obj-model>
+			<a-obj-model src="#sedia" mtl="#mSedia" position='-9.5 0.1 -25' scale="1.5 1.5 1.5" rotation="0 -90 0"></a-obj-model>
 
 
-			<a-obj-model src="#monitor" mtl="#mMonitor" position='3.25 1.2 -2.3' scale="2 2 2" rotation="0 0 0" static-body></a-obj-model>
-			<a-obj-model src="#monitor" mtl="#mMonitor" position='4.35 1.2 -2.3' scale="1.8 1.8 1.8" rotation="0 20 0" static-body></a-obj-model>
-			<a-obj-model src="#monitor" mtl="#mMonitor" position='6.9 1.2 -2.3' scale="1.9 1.9 1.9" rotation="0 20 0" static-body></a-obj-model>
-			<a-obj-model src="#monitor" mtl="#mMonitor" position='5.8 1.2 -2.3' scale="2.10 2.15 2.5" rotation="0 0 0" static-body></a-obj-model>
-			<a-obj-model src="#monitor" mtl="#mMonitor" position='3.5 1.2 -1.5' scale="2.15 2.15 2.15" rotation="0 200 0" static-body></a-obj-model>
-			<a-obj-model src="#monitor" mtl="#mMonitor" position='4.6 1.2 -1.5' scale="1.9 1.9 1.9" rotation="0 180 0" static-body></a-obj-model>
-			<a-obj-model src="#monitor" mtl="#mMonitor" position='7 1.2 -1.5' scale="2.30 2.27 2.25" rotation="0 170 0" static-body></a-obj-model>
-			<a-obj-model src="#monitor" mtl="#mMonitor" position='5.85 1.2 -1.5' scale="2.15 2.10 2.05" rotation="0 200 0" static-body></a-obj-model>
+			<a-obj-model src="#monitor" mtl="#mMonitor" position='3.25 1.2 -2.3' scale="2 2 2" rotation="0 0 0"></a-obj-model>
+			<a-obj-model src="#monitor" mtl="#mMonitor" position='4.35 1.2 -2.3' scale="1.8 1.8 1.8" rotation="0 20 0"></a-obj-model>
+			<a-obj-model src="#monitor" mtl="#mMonitor" position='6.9 1.2 -2.3' scale="1.9 1.9 1.9" rotation="0 20 0"></a-obj-model>
+			<a-obj-model src="#monitor" mtl="#mMonitor" position='5.8 1.2 -2.3' scale="2.10 2.15 2.5" rotation="0 0 0"></a-obj-model>
+			<a-obj-model src="#monitor" mtl="#mMonitor" position='3.5 1.2 -1.5' scale="2.15 2.15 2.15" rotation="0 200 0"></a-obj-model>
+			<a-obj-model src="#monitor" mtl="#mMonitor" position='4.6 1.2 -1.5' scale="1.9 1.9 1.9" rotation="0 180 0"></a-obj-model>
+			<a-obj-model src="#monitor" mtl="#mMonitor" position='7 1.2 -1.5' scale="2.30 2.27 2.25" rotation="0 170 0"></a-obj-model>
+			<a-obj-model src="#monitor" mtl="#mMonitor" position='5.85 1.2 -1.5' scale="2.15 2.10 2.05" rotation="0 200 0"></a-obj-model>
 
-			<a-obj-model src="#computer" mtl="#mComputer" position='4 0.1 -2.5' scale="0.15 0.15 0.15" rotation="0 0 0" static-body></a-obj-model>
-			<a-obj-model src="#computer" mtl="#mComputer" position='4.5 0.1 -2.5' scale="0.15 0.15 0.15" rotation="0 0 0" static-body></a-obj-model>
-			<a-obj-model src="#computer" mtl="#mComputer" position='5 0.1 -1.5' scale="0.15 0.15 0.15" rotation="0 180 0" static-body></a-obj-model>
-			<a-obj-model src="#computer" mtl="#mComputer" position='5.5 0.1 -1.5' scale="0.15 0.15 0.15" rotation="0 180 0" static-body></a-obj-model>
-			<a-obj-model src="#computer" mtl="#mComputer" position='5.3 0.9 -2.4' scale="0.13 0.13 0.13" rotation="0 0 90" static-body></a-obj-model>
+			<a-obj-model src="#computer" mtl="#mComputer" position='4 0.1 -2.5' scale="0.15 0.15 0.15" rotation="0 0 0"></a-obj-model>
+			<a-obj-model src="#computer" mtl="#mComputer" position='4.5 0.1 -2.5' scale="0.15 0.15 0.15" rotation="0 0 0"></a-obj-model>
+			<a-obj-model src="#computer" mtl="#mComputer" position='5 0.1 -1.5' scale="0.15 0.15 0.15" rotation="0 180 0"></a-obj-model>
+			<a-obj-model src="#computer" mtl="#mComputer" position='5.5 0.1 -1.5' scale="0.15 0.15 0.15" rotation="0 180 0"></a-obj-model>
+			<a-obj-model src="#computer" mtl="#mComputer" position='5.3 0.9 -2.4' scale="0.13 0.13 0.13" rotation="0 0 90"></a-obj-model>
 
-			<a-obj-model src="#tastiera" mtl="#mTastiera" position='3.5 1.2 -2.75' scale="0.15 0.15 0.15" rotation="0 0 0" static-body></a-obj-model>
-			<a-obj-model src="#tastiera" mtl="#mTastiera" position='5.75 1.2 -2.75' scale="0.15 0.15 0.15" rotation="0 0 0" static-body></a-obj-model>
-			<a-obj-model src="#tastiera" mtl="#mTastiera" position='4.5 1.2 -1' scale="0.15 0.15 0.15" rotation="0 180 0" static-body></a-obj-model>
-			<a-obj-model src="#tastiera" mtl="#mTastiera" position='6.75 1.2 -1' scale="0.15 0.15 0.15" rotation="0 180 0" static-body></a-obj-model>
+			<a-obj-model src="#tastiera" mtl="#mTastiera" position='3.5 1.2 -2.75' scale="0.15 0.15 0.15" rotation="0 0 0"></a-obj-model>
+			<a-obj-model src="#tastiera" mtl="#mTastiera" position='5.75 1.2 -2.75' scale="0.15 0.15 0.15" rotation="0 0 0"></a-obj-model>
+			<a-obj-model src="#tastiera" mtl="#mTastiera" position='4.5 1.2 -1' scale="0.15 0.15 0.15" rotation="0 180 0"></a-obj-model>
+			<a-obj-model src="#tastiera" mtl="#mTastiera" position='6.75 1.2 -1' scale="0.15 0.15 0.15" rotation="0 180 0"></a-obj-model>
 
-			<a-obj-model src="#entrata" mtl="#mEntrata" position='-10.5 0.1 -23' scale="1.1 1.1 1.1" rotation="0 0 0" static-body></a-obj-model>
+			<a-obj-model src="#entrata" mtl="#mEntrata" position='-10.5 0.1 -23' scale="1.1 1.1 1.1" rotation="0 0 0"></a-obj-model>
 
-			<a-obj-model src="#porta" mtl="#mPorta" position='-2.86 0.1 -5.73' scale="1.92 1.4 1.4" rotation="0 0 0" static-body></a-obj-model>
-			<a-obj-model src="#porta" mtl="#mPorta" position='-5.06 0.1 -5.73' scale="1.92 1.4 1.4" rotation="0 0 0" static-body></a-obj-model>
-			<a-obj-model src="#porta" mtl="#mPorta" position='-22.22 0.1 -5.73' scale="1.92 1.4 1.4" rotation="0 0 0" static-body></a-obj-model>
+			<a-obj-model src="#porta" mtl="#mPorta" position='-2.86 0.1 -5.73' scale="1.92 1.4 1.4" rotation="0 0 0"></a-obj-model>
+			<a-obj-model src="#porta" mtl="#mPorta" position='-5.06 0.1 -5.73' scale="1.92 1.4 1.4" rotation="0 0 0"></a-obj-model>
+			<a-obj-model src="#porta" mtl="#mPorta" position='-22.22 0.1 -5.73' scale="1.92 1.4 1.4" rotation="0 0 0"></a-obj-model>
 			
-			<a-obj-model src="#porta" mtl="#mPorta" position='-13.73 0.1 -25.17' scale="1.3 1.4 1.4" rotation="0 -135 0" static-body></a-obj-model>
-			<a-obj-model src="#porta" mtl="#mPorta" position='-0.63 0.1 -24.22' scale="1.3 1.4 1.4" rotation="0 135 0" static-body></a-obj-model>
-			<a-obj-model src="#porta" mtl="#mPorta" position='-0.4 0.1 -8.29' scale="1.92 1.4 1.4" rotation="0 90 0" static-body></a-obj-model>
-			<a-obj-model src="#porta" mtl="#mPorta" position='-0.4 0.1 -17.72' scale="1.92 1.4 1.4" rotation="0 90 0" static-body></a-obj-model>
-			<a-obj-model src="#porta" mtl="#mPorta" position='-0.4 0.1 -15.39' scale="1.92 1.4 1.4" rotation="0 90 0" static-body></a-obj-model>
-			<a-obj-model src="#porta" mtl="#mPorta" position='-1.98 0.1 -25.35' scale="1.92 1.4 1.4" rotation="0 180 0" static-body></a-obj-model>
-			<a-obj-model src="#porta" mtl="#mPorta" position='-11.4 0.1 -25.35' scale="1.92 1.4 1.4" rotation="0 180 0" static-body></a-obj-model>
-			<a-obj-model src="#portavetro" mtl="#mPortavetro" position='-24.3 0.1 -21.33' scale="1.92 1.4 1.4" rotation="0 0 0" static-body></a-obj-model>
-			<a-obj-model src="#portavetro" mtl="#mPortavetro" position='-26.1 0.1 -17.7' scale="1.92 1.4 1.4" rotation="0 90 0" static-body></a-obj-model>
-			<a-obj-model src="#portavetro" mtl="#mPortavetro" position='-28.6 0.1 -21.33' scale="1.92 1.4 1.4" rotation="0 0 0" static-body></a-obj-model>
+			<a-obj-model src="#porta" mtl="#mPorta" position='-13.73 0.1 -25.17' scale="1.3 1.4 1.4" rotation="0 -135 0"></a-obj-model>
+			<a-obj-model src="#porta" mtl="#mPorta" position='-0.63 0.1 -24.22' scale="1.3 1.4 1.4" rotation="0 135 0"></a-obj-model>
+			<a-obj-model src="#porta" mtl="#mPorta" position='-0.4 0.1 -8.29' scale="1.92 1.4 1.4" rotation="0 90 0"></a-obj-model>
+			<a-obj-model src="#porta" mtl="#mPorta" position='-0.4 0.1 -17.72' scale="1.92 1.4 1.4" rotation="0 90 0"></a-obj-model>
+			<a-obj-model src="#porta" mtl="#mPorta" position='-0.4 0.1 -15.39' scale="1.92 1.4 1.4" rotation="0 90 0"></a-obj-model>
+			<a-obj-model src="#porta" mtl="#mPorta" position='-1.98 0.1 -25.35' scale="1.92 1.4 1.4" rotation="0 180 0"></a-obj-model>
+			<a-obj-model src="#porta" mtl="#mPorta" position='-11.4 0.1 -25.35' scale="1.92 1.4 1.4" rotation="0 180 0"></a-obj-model>
 
-			<a-obj-model src="#pianta" mtl="#mPianta" position="-29 0.1 2" scale="1.3 1.3 1.3"></a-obj-model>
+			<a-obj-model src="#portavetro" mtl="#mPortavetro" position='-24.3 0.1 -21.33' scale="1.92 1.4 1.4" rotation="0 0 0"></a-obj-model>
+			<a-obj-model src="#portavetro" mtl="#mPortavetro" position='-26.1 0.1 -17.7' scale="1.92 1.4 1.4" rotation="0 90 0"></a-obj-model>
+			<a-obj-model src="#portavetro" mtl="#mPortavetro" position='-28.6 0.1 -21.33' scale="1.92 1.4 1.4" rotation="0 0 0"></a-obj-model>
 
-			<a-obj-model src="#sediaentrata" mtl="#mSediaentrata" position='-12.5 0.1 -11' scale="1.2 1.2 1.2" rotation="0 30 0" static-body></a-obj-model>
-			<a-obj-model src="#sediaentrata" mtl="#mSediaentrata" position='-13 0.1 -15' scale="1.2 1.2 1.2" rotation="0 0 0" static-body></a-obj-model>
-			<a-obj-model src="#sediaentrata" mtl="#mSediaentrata" position='-12.5 0.1 -19' scale="1.2 1.2 1.2" rotation="0 -30 0" static-body></a-obj-model>
+			<a-obj-model src="#pianta" mtl="#mPianta" position="-29 0.1 2" scale="1.3 1.3 1.3" ></a-obj-model>
 
-			<a-obj-model src="#gabinetto" mtl="#mGabinetto" position='7 0.1 -10.8'  rotation="0 -90 0" static-body></a-obj-model>
-			<a-obj-model src="#lavandino" mtl="#mLavandino" position='5 0.1 -10.8'  rotation="0 -90 0" static-body></a-obj-model>
+			<a-obj-model src="#sediaentrata" mtl="#mSediaentrata" position='-12.5 0.1 -11' scale="1.3 1.3 1.3" rotation="0 30 0"></a-obj-model>
+			<a-obj-model src="#sediaentrata" mtl="#mSediaentrata" position='-13 0.1 -15' scale="1.3 1.3 1.3" rotation="0 0 0"></a-obj-model>
+			<a-obj-model src="#sediaentrata" mtl="#mSediaentrata" position='-12.5 0.1 -19' scale="1.3 1.3 1.3" rotation="0 -30 0"></a-obj-model>
 
-			<a-obj-model src="#tavoloentrata" mtl="#mTavoloentrata" position='-11 0.1 -14.5' scale="0.3 0.3 0.4" rotation="0 0 0" static-body></a-obj-model>
+			<a-obj-model src="#gabinetto" mtl="#mGabinetto" position='7 0.1 -10.8'  rotation="0 -90 0"></a-obj-model>
+			<a-obj-model src="#lavandino" mtl="#mLavandino" position='5 0.1 -10.8'  rotation="0 -90 0"></a-obj-model>
 
-			<a-obj-model src="#estintore" mtl="#mEstintore" position='-0.55 0.1 -7.88' scale="0.15 0.15 0.15" rotation="0 180 0" static-body></a-obj-model>
+			<a-obj-model src="#tavoloentrata" mtl="#mTavoloentrata" position='-11 0.1 -14.5' scale="0.3 0.3 0.4" rotation="0 0 0"></a-obj-model>
+
+			<a-obj-model src="#estintore" mtl="#mEstintore" position='-0.55 0.1 -7.88' rotation="0 180 0"></a-obj-model>
 			<!-- FINE MODELLI -->
 
 			<!-- GRAFFITI -->
-			<a-image src='#logo' height='4' width='10' repeat='1' position='3 2 2.06' side='front'></a-image>
-			<a-image src='#logo1' height='2' width='4' repeat='1' position='-26.41 2.5 -15' rotation="0 -90 0" side='front'></a-image>
 			<a-image src='#tekapp' height='1' width='4' repeat='1' position='-8 3 -25.2' rotation="0 0 0" side='front'></a-image>
 			<a-image src='#cartelloestintore' height='0.4' width='0.25' repeat='1' position='-0.73 2.5 -7.63' rotation="0 180 0" side='front'></a-image>
 			<!-- FINE GRAFFITI -->
@@ -128,9 +117,10 @@
 			<!-- FINE CIELO -->
 
 			<!-- DIPENDENTE (Altezza: 1.80 / 1.65)-->
-			<a-entity position="-17 1.65 -10" rotation="0 0 0">
-				<!-- <a-animation attribute="rotation" delay="3000" dur="8000" fill="forwards" to="0 1080 1080"></a-animation> -->
-				<a-camera fov="70" id="posizione"></a-camera>
+			<a-entity position="-5 1.65 -10">
+				<a-camera fov="70" id="posizione">
+					<a-cursor color="black"></a-cursor>
+				</a-camera>
 			</a-entity>
 		</a-scene>
 	</body>
