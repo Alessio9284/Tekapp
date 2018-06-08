@@ -2,11 +2,11 @@
 ## Alias OBJ Material File
 # Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
 
-newmtl _
+newmtl _2
 Ka 0.000000 0.000000 0.000000
 Kd 0.803922 0.662745 0.505882
 Ks 0.330000 0.330000 0.330000
-map_Kd porta/_.jpg
+map_Kd porta/_2.jpg
 
 newmtl BackColor
 Ka 0.000000 0.000000 0.000000
@@ -18,12 +18,6 @@ Ka 0.000000 0.000000 0.000000
 Kd 0.596078 0.337255 0.164706
 Ks 0.330000 0.330000 0.330000
 map_Kd porta/Wood_Cherry_Original.jpg
-
-newmtl _1
-Ka 0.000000 0.000000 0.000000
-Kd 0.749020 0.470588 0.039216
-Ks 0.330000 0.330000 0.330000
-map_Kd porta/_1.jpg
 
 newmtl FrontColor
 Ka 0.000000 0.000000 0.000000

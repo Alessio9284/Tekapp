@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>Tekapp 3D</title>
+		<link rel="icon" href="img/favicontekapp.png" />
 		<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 	</head>
 	<body>
@@ -13,6 +15,8 @@
 				<!-- FINE IMMAGINI -->
 
 				<!-- MODELLI PRECARICATI -->
+				<a-asset-item id="estintore" src="oggetti/estintore.obj"></a-asset-item>
+				<a-asset-item id="mEstintore" src="oggetti/estintore.mtl"></a-asset-item>
 				<a-asset-item id="pianta" src="oggetti/pianta.obj"></a-asset-item>
 				<a-asset-item id="mPianta" src="oggetti/pianta.mtl"></a-asset-item>
 				<a-asset-item id="tavolo" src="oggetti/tavolo.obj"></a-asset-item>
@@ -31,29 +35,33 @@
 				<a-asset-item id="mEntrata" src="oggetti/entrata.mtl"></a-asset-item>
 				<a-asset-item id="sediaentrata" src="oggetti/sediaentrata.obj"></a-asset-item>
 				<a-asset-item id="mSediaentrata" src="oggetti/sediaentrata.mtl"></a-asset-item>
-				<a-asset-item id="tavoloentrata" src="oggetti/tavoloentrata.obj"></a-asset-item>
-				<a-asset-item id="mTavoloentrata" src="oggetti/tavoloentrata.mtl"></a-asset-item>
 				<a-asset-item id="lavandino" src="oggetti/lavandino.obj"></a-asset-item>
 				<a-asset-item id="mLavandino" src="oggetti/lavandino.mtl"></a-asset-item>
 				<a-asset-item id="gabinetto" src="oggetti/gabinetto.obj"></a-asset-item>
 				<a-asset-item id="mGabinetto" src="oggetti/gabinetto.mtl"></a-asset-item>
 				<a-asset-item id="portavetro" src="oggetti/portavetro.obj"></a-asset-item>
 				<a-asset-item id="mPortavetro" src="oggetti/portavetro.mtl"></a-asset-item>
-				<a-asset-item id="estintore" src="oggetti/estintore.obj"></a-asset-item>
-				<a-asset-item id="mEstintore" src="oggetti/estintore.mtl"></a-asset-item>
+				<a-asset-item id="server" src="oggetti/server.obj"></a-asset-item>
+				<a-asset-item id="mServer" src="oggetti/server.mtl"></a-asset-item>
 				<!-- MODELLI PRECARICATI -->
 			</a-assets>
 			<!-- FINE TEXTURE PRECARICATE -->
 
 			<!-- MODELLI -->
 			<a-obj-model src="#tavolo" mtl="#mTavolo" position='3 0 -0.5' scale="1.1 1.1 1.1"></a-obj-model>
+			<a-obj-model src="#tavolo" mtl="#mTavolo" position='-11 0.1 -14.5' scale="0.4 0.6 1" rotation="0 0 0"></a-obj-model>
+			<a-obj-model src="#tavolo" mtl="#mTavolo" position='9 0.1 -16.2' scale="0.3 1 2.3" rotation="0 90 0"></a-obj-model>
+			<a-obj-model src="#tavolo" mtl="#mTavolo" position='6 0.1 -17.59' scale="0.3 1 1" rotation="0 90 0"></a-obj-model>
+			<a-obj-model src="#tavolo" mtl="#mTavolo" position='6 0.1 -24' scale="0.3 1 1" rotation="0 90 0"></a-obj-model>
 
 			<a-obj-model src="#sedia" mtl="#mSedia" position='3.25 0.1 -3' scale="1.5 1.5 1.5" rotation="0 0 0"></a-obj-model>
 			<a-obj-model src="#sedia" mtl="#mSedia" position='5.5 0.1 -3' scale="1.5 1.5 1.5"></a-obj-model>
 			<a-obj-model src="#sedia" mtl="#mSedia" position='4.5 0.1 -0.5' scale="1.5 1.5 1.5" rotation="0 180 0"></a-obj-model>
 			<a-obj-model src="#sedia" mtl="#mSedia" position='7 0.1 -0.5' scale="1.5 1.5 1.5" rotation="0 180 0"></a-obj-model>
 			<a-obj-model src="#sedia" mtl="#mSedia" position='-9.5 0.1 -25' scale="1.5 1.5 1.5" rotation="0 -90 0"></a-obj-model>
+			<a-obj-model src="#sedia" mtl="#mSedia" position='5.5 0.1 -16' scale="1.5 1.5 1.5" rotation="0 180 0"></a-obj-model>
 
+			<a-obj-model src="#server" mtl="#mServer" position='9 0.1 -12.2' scale="0.2 0.2 0.2" rotation="0 180 0"></a-obj-model>
 
 			<a-obj-model src="#monitor" mtl="#mMonitor" position='3.25 1.2 -2.3' scale="2 2 2" rotation="0 0 0"></a-obj-model>
 			<a-obj-model src="#monitor" mtl="#mMonitor" position='4.35 1.2 -2.3' scale="1.8 1.8 1.8" rotation="0 20 0"></a-obj-model>
@@ -63,17 +71,19 @@
 			<a-obj-model src="#monitor" mtl="#mMonitor" position='4.6 1.2 -1.5' scale="1.9 1.9 1.9" rotation="0 180 0"></a-obj-model>
 			<a-obj-model src="#monitor" mtl="#mMonitor" position='7 1.2 -1.5' scale="2.30 2.27 2.25" rotation="0 170 0"></a-obj-model>
 			<a-obj-model src="#monitor" mtl="#mMonitor" position='5.85 1.2 -1.5' scale="2.15 2.10 2.05" rotation="0 200 0"></a-obj-model>
+			<a-obj-model src="#monitor" mtl="#mMonitor" position='4.5 1.2 -16.9' scale="2.15 2.10 2.05" rotation="0 200 0"></a-obj-model>
 
 			<a-obj-model src="#computer" mtl="#mComputer" position='4 0.1 -2.5' scale="0.15 0.15 0.15" rotation="0 0 0"></a-obj-model>
-			<a-obj-model src="#computer" mtl="#mComputer" position='4.5 0.1 -2.5' scale="0.15 0.15 0.15" rotation="0 0 0"></a-obj-model>
 			<a-obj-model src="#computer" mtl="#mComputer" position='5 0.1 -1.5' scale="0.15 0.15 0.15" rotation="0 180 0"></a-obj-model>
 			<a-obj-model src="#computer" mtl="#mComputer" position='5.5 0.1 -1.5' scale="0.15 0.15 0.15" rotation="0 180 0"></a-obj-model>
 			<a-obj-model src="#computer" mtl="#mComputer" position='5.3 0.9 -2.4' scale="0.13 0.13 0.13" rotation="0 0 90"></a-obj-model>
+			<a-obj-model src="#computer" mtl="#mComputer" position='4 0.1 -17' scale="0.13 0.13 0.13" rotation="0 180 0"></a-obj-model>
 
 			<a-obj-model src="#tastiera" mtl="#mTastiera" position='3.5 1.2 -2.75' scale="0.15 0.15 0.15" rotation="0 0 0"></a-obj-model>
 			<a-obj-model src="#tastiera" mtl="#mTastiera" position='5.75 1.2 -2.75' scale="0.15 0.15 0.15" rotation="0 0 0"></a-obj-model>
 			<a-obj-model src="#tastiera" mtl="#mTastiera" position='4.5 1.2 -1' scale="0.15 0.15 0.15" rotation="0 180 0"></a-obj-model>
 			<a-obj-model src="#tastiera" mtl="#mTastiera" position='6.75 1.2 -1' scale="0.15 0.15 0.15" rotation="0 180 0"></a-obj-model>
+			<a-obj-model src="#tastiera" mtl="#mTastiera" position='5.2 1.2 -16.7' scale="0.15 0.15 0.15" rotation="0 180 0"></a-obj-model>
 
 			<a-obj-model src="#entrata" mtl="#mEntrata" position='-10.5 0.1 -23' scale="1.1 1.1 1.1" rotation="0 0 0"></a-obj-model>
 
@@ -102,25 +112,30 @@
 			<a-obj-model src="#gabinetto" mtl="#mGabinetto" position='7 0.1 -10.8'  rotation="0 -90 0"></a-obj-model>
 			<a-obj-model src="#lavandino" mtl="#mLavandino" position='5 0.1 -10.8'  rotation="0 -90 0"></a-obj-model>
 
-			<a-obj-model src="#tavoloentrata" mtl="#mTavoloentrata" position='-11 0.1 -14.5' scale="0.3 0.3 0.4" rotation="0 0 0"></a-obj-model>
-
 			<a-obj-model src="#estintore" mtl="#mEstintore" position='-0.55 0.1 -7.88' rotation="0 180 0"></a-obj-model>
 			<!-- FINE MODELLI -->
+
+			<!-- TESTI -->
+			<a-entity>
+				<a-animation delay="18000" attribute="visible" dur="indefinite" to="false"></a-animation>
+				<a-text width="2" height="1" scale="1.9 1.9 1.9" color="gainsboro" position="-27.5 2 0" align="center" value="Un'azienda lontana lontana ..."></a-text>
+				<a-text width="2" height="1" color="red" position="-27.5 2 -10" align="center" value="Powered By Alessio & Vincenzo"></a-text>
+				<a-text width="2" height="1" scale="2.2 2.2 2.2" color="orange" position="-24 2 -22.7" align="center" rotation="0 -90 0" value="BENVENUTO IN TEKAPP!"></a-text>
+			</a-entity>
+			<!-- FINE TESTI -->
 
 			<!-- GRAFFITI -->
 			<a-image src='#tekapp' height='1' width='4' repeat='1' position='-8 3 -25.2' rotation="0 0 0" side='front'></a-image>
 			<a-image src='#cartelloestintore' height='0.4' width='0.25' repeat='1' position='-0.73 2.5 -7.63' rotation="0 180 0" side='front'></a-image>
 			<!-- FINE GRAFFITI -->
 
-			<!-- CIELO -->
-			<a-sky src="img/cielo5.png"></a-sky>
-			<!-- FINE CIELO -->
-
-			<!-- DIPENDENTE (Altezza: 1.80 / 1.65)-->
-			<a-entity position="-5 1.65 -10">
-				<a-camera fov="70" id="posizione">
-					<a-cursor color="black"></a-cursor>
-				</a-camera>
+			<!-- UTENTE (Altezza: 1.80) -27.5 1.80 1.5 -->
+			<a-entity position="-27.5 1.80 1.5">
+				<a-animation delay="3000" attribute="position" from="-27.5 1.80 1.5" to="-27.5 1.80 -22.7" dur="12000" fill="forward"></a-animation>
+				<a-animation delay="11000" attribute="rotation" to="0 -90 0" dur="5000" fill="forward"></a-animation>
+					<a-camera far="8" fov="70" id="posizione">
+						<a-cursor color="black"></a-cursor>
+					</a-camera>
 			</a-entity>
 		</a-scene>
 	</body>
