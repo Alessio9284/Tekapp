@@ -1,10 +1,8 @@
 # Tekapp
-Pianta di Tekapp s.r.l.
+utilizzo del framework A-FRAME (https://aframe.io/) per la realizzazione della Pianta di Tekapp s.r.l. 
 
 Powered by Alessio & Vincenzo
 
 ### The Vincent's Club
 
-http://192.168.45.20:32772/Tekapp/
-
-Serve un PC abbastanza potente
+Avvertenze: Serve un PC abbastanza potente
